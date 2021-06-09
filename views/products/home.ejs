@@ -1,0 +1,42 @@
+<%- include("../partials/header")%>
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color:white">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/products" style="color: black;"><i class="fas fa-shopping-basket" style="margin-right: 10px;font-size: 1.7rem;color: black;"></i><strong>Shopping Cart</strong></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/" style="color: black;"><strong>Home</strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/products" style="color:Black;"><strong>Products</strong></a>
+          </li>
+          <%if (currentUser && currentUser.username == 'Shubham'){%>
+          <li class="nav-item">
+            <a class="nav-link active" href="/products/new" tabindex="-1" aria-disabled="true" style="color: black;"><strong>New</strong></a>
+          </li>
+          <%}%>
+        </ul>
+        <div class="navbar-nav ml-auto">
+  
+            <%if(!currentUser){%>
+              <a href="/login" class="nav-link active" style="color: black;"><strong>Login</strong></a>
+          <%}%>
+        </div>
+        
+      </div>
+    </div>
+  </nav>
+    <div id="spc">
+        <div id="center" class="col-md-12 text-center">
+       <h3 style="text-align: center;"><strong>Keep the Summer Vibe Alive</strong></h3>
+       <h5 style="text-align: center;"><strong>Explore our new Arrivals</strong> </h5>
+       <a href="/products" class="btn" style="background-color:#f4a261 ;"><strong>Dive Right In</strong</a>
+     
+        </div>
+    </div>
+    
+
+<%- include("../partials/footer")%> 
